@@ -1,0 +1,46 @@
+<footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>PlateColor</h3>
+        <p>自炊生活をもっと楽しく、効率的に。</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>メニュー</h3>
+        <ul>
+          <li><a href="/features">特徴</a></li>
+          <li><a href="/recipes">レシピ</a></li>
+          <li><a href="/blog">ブログ</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h3>フォロー</h3>
+        <div class="social-links">
+          {% if site.twitter_username %}
+          <a href="https://twitter.com/{{ site.twitter_username }}" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23 3.01s-2.018 1.192-3.14 1.53a4.48 4.48 0 00-7.86 3v1a10.66 10.66 0 01-9-4.53s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5 0-.278-.028-.556-.08-.83C21.94 5.674 23 3.01 23 3.01z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          {% endif %}
+          {% if site.github_username %}
+          <a href="https://github.com/{{ site.github_username }}" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+  
+      <div class="footer-section">
+        <h3>お問い合わせ</h3>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ site.time | date: '%Y' }} PlateColor. All rights reserved.</p>
+    </div>
+  </footer>

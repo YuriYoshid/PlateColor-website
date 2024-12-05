@@ -1,0 +1,29 @@
+title: PlateColor
+email: yuri2009y@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  自炊生活をもっと楽しく、効率的に。PlateColorは食材管理から献立提案まで、
+  あなたの自炊生活をトータルサポートします。
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: lis_poire
+github_username:  lis_poire
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+sass:
+  style: compressed
+  sass_dir: assets/css
+
+# カスタム設定
+nav_items:
+  - title: 特徴
+    url: /features
+  - title: レシピ
+    url: /recipes
+  - title: ブログ
+    url: /blog
+  - title: About
+    url: /about
