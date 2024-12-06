@@ -3,15 +3,17 @@ email: yuri2009y@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   自炊生活をもっと楽しく、効率的に。PlateColorは食材管理から献立提案まで、
   あなたの自炊生活をトータルサポートします。
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: ""
 url: "https://platecolor.jp"
 twitter_username: lis_poire
-github_username:  lis_poire
+github_username: lis_poire
 
 # Build settings
-theme: minima
+remote_theme: jekyll/minima  # themeをremote_themeに変更
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme    # この行を追加
+  - jekyll-seo-tag        # この行を追加
 
 sass:
   style: compressed
