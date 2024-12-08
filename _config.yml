@@ -5,8 +5,13 @@ description: >- # this means to ignore newlines until "baseurl:"
   あなたの自炊生活をトータルサポートします。
 baseurl: ""
 url: "https://platecolor.jp"
+
+colors:
+  primary: "#4CAF50"
+  accent: "#FF5722"
+
 twitter_username: lis_poire
-github_username: lis_poire
+github_username: YuriYoshid
 
 # Build settings
 remote_theme: jekyll/minima  # themeをremote_themeに変更

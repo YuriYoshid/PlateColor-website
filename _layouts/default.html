@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  {% include head.html %}
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-VY3PH148W0"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {% include header.html %}
+    
+    <main class="page-content" role="main">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <!-- プログレッシブ エンハンスメント用のJavaScript -->
+    <script>
+      // スムーズスクロールの実装
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
