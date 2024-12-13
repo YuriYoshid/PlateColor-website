@@ -309,14 +309,11 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  base64
-  bigdecimal
-  csv
   github-pages
-  jekyll-feed (~> 0.12)
-  jekyll-remote-theme
-  jekyll-seo-tag
-  jekyll-toc
+  jekyll-feed (~> 0.17.0)
+  jekyll-remote-theme (~> 0.4.3)
+  jekyll-seo-tag (~> 2.8.0)
+  jekyll-toc (~> 0.19.0)
   webrick
 
 BUNDLED WITH
