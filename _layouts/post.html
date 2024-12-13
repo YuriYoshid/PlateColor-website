@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<article class="post">
+  <!-- ヘッダー部分 -->
+  <header class="post-header">
+    <div class="post-categories">
+      {% for category in page.categories %}
+      <span class="category-tag">{{ category }}</span>
+      {% endfor %}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%Y年%m月%d日" }}
+      </time>
+    </div>
+  </header>
+
+  <!-- アイキャッチ画像 -->
+  {% if page.image %}
+  <div class="post-thumbnail">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  </div>
+  {% endif %}
+
+  <!-- 前置き -->
+  {% if page.excerpt %}
+  <div class="post-excerpt">
+    {{ page.excerpt }}
+  </div>
+  {% endif %}
+
+  <!-- 目次 -->
+  {% if page.toc %}
+  <div class="table-of-contents">
+    <h2>目次</h2>
+    {{ content | toc }}
+  </div>
+  {% endif %}
+
+  <!-- 本文 -->
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <!-- タグ -->
+  {% if page.tags %}
+  <div class="post-tags">
+    {% for tag in page.tags %}
+    <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- 後書き -->
+  {% if page.afterword %}
+  <div class="post-afterword">
+    <h2>あとがき</h2>
+    {{ page.afterword }}
+  </div>
+  {% endif %}
+</article>

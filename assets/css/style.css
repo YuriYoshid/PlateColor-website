@@ -225,3 +225,151 @@
       margin-bottom: 2rem;
     }
   }
+
+  /* 記事スタイル */
+.post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* カテゴリー表示 */
+.post-categories {
+  margin-bottom: 1rem;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  background: #f0f0f0;
+  color: #666;
+}
+
+/* 記事タイトル */
+.post-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 1.5rem 0;
+  color: #333;
+}
+
+/* 日付 */
+.post-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+/* 目次 */
+.table-of-contents {
+  background: #f8f9fa;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.table-of-contents h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.table-of-contents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.table-of-contents li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.table-of-contents li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  transform: rotate(-45deg);
+}
+
+/* 本文スタイル */
+.post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.post-content h2 {
+  font-size: 1.8rem;
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.post-content h3 {
+  font-size: 1.4rem;
+  margin: 2.5rem 0 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* 画像スタイル */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+/* 引用 */
+.post-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--primary-color);
+  background: #f8f9fa;
+  font-style: italic;
+}
+
+/* リスト */
+.post-content ul, 
+.post-content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .post {
+    padding: 1rem;
+  }
+
+  .post-title {
+    font-size: 1.8rem;
+  }
+
+  .post-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .post-content h3 {
+    font-size: 1.3rem;
+  }
+}

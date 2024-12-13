@@ -6,25 +6,35 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://platecolor.jp"
 
+# カラー設定
 colors:
   primary: "#4CAF50"
   accent: "#FF5722"
 
-twitter_username: lis_poire
-github_username: YuriYoshid
+# SNS設定
+social:
+  twitter_username: lis_poire
+  github_username: YuriYoshid
 
-# Build settings
-remote_theme: jekyll/minima  # themeをremote_themeに変更
+# ビルド設定
+remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme    # この行を追加
-  - jekyll-seo-tag        # この行を追加
+  - jekyll-remote-theme   
+  - jekyll-seo-tag   
+  - jekyll-toc
 
+# TOC設定
+toc:
+  min_level: 2
+  max_level: 3      
+
+# SASS設定
 sass:
   style: compressed
   sass_dir: assets/css
 
-# カスタム設定
+# ナビゲーション設定
 nav_items:
   - title: 特徴
     url: /features
@@ -34,3 +44,23 @@ nav_items:
     url: /blog
   - title: About
     url: /about
+
+# ビルド除外設定
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# デフォルトのフロントマター設定
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "PlateColor"
