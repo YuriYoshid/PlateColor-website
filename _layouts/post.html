@@ -1,63 +1,38 @@
 ---
 layout: default
 ---
-<article class="post">
-  <!-- ヘッダー部分 -->
+<article class="post h-entry">
   <header class="post-header">
-    <div class="post-categories">
-      {% for category in page.categories %}
-      <span class="category-tag">{{ category }}</span>
-      {% endfor %}
+    {% if page.image %}
+    <div class="post-thumbnail">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
     </div>
-    <h1 class="post-title">{{ page.title }}</h1>
+    {% endif %}
+    
+    <h1 class="post-title p-name">{{ page.title }}</h1>
+    
     <div class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">
         {{ page.date | date: "%Y年%m月%d日" }}
       </time>
+      {% if page.categories %}
+        <span class="categories">
+          {% for category in page.categories %}
+            <span class="category-tag">{{ category }}</span>
+          {% endfor %}
+        </span>
+      {% endif %}
     </div>
+
+    {% if page.toc %}
+    <div class="table-of-contents">
+      <h2>目次</h2>
+      {{ content | toc }}
+    </div>
+    {% endif %}
   </header>
 
-  <!-- アイキャッチ画像 -->
-  {% if page.image %}
-  <div class="post-thumbnail">
-    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-  </div>
-  {% endif %}
-
-  <!-- 前置き -->
-  {% if page.excerpt %}
-  <div class="post-excerpt">
-    {{ page.excerpt }}
-  </div>
-  {% endif %}
-
-  <!-- 目次 -->
-  {% if page.toc %}
-  <div class="table-of-contents">
-    <h2>目次</h2>
-    {{ content | toc }}
-  </div>
-  {% endif %}
-
-  <!-- 本文 -->
-  <div class="post-content">
+  <div class="post-content e-content">
     {{ content }}
   </div>
-
-  <!-- タグ -->
-  {% if page.tags %}
-  <div class="post-tags">
-    {% for tag in page.tags %}
-    <span class="tag">{{ tag }}</span>
-    {% endfor %}
-  </div>
-  {% endif %}
-
-  <!-- 後書き -->
-  {% if page.afterword %}
-  <div class="post-afterword">
-    <h2>あとがき</h2>
-    {{ page.afterword }}
-  </div>
-  {% endif %}
 </article>
