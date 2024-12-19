@@ -1,38 +1,40 @@
 ---
 layout: default
 ---
-<article class="post h-entry">
-  <header class="post-header">
-    {% if page.image %}
-    <div class="post-thumbnail">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-    </div>
-    {% endif %}
-    
-    <h1 class="post-title p-name">{{ page.title }}</h1>
-    
-    <div class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%Y年%m月%d日" }}
-      </time>
-      {% if page.categories %}
-        <span class="categories">
-          {% for category in page.categories %}
-            <span class="category-tag">{{ category }}</span>
-          {% endfor %}
-        </span>
+<div class="post-container">
+  <article class="post h-entry">
+    <header class="post-header">
+      {% if page.image %}
+      <div class="post-thumbnail">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+      </div>
       {% endif %}
-    </div>
+      
+      <h1 class="post-title p-name">{{ page.title }}</h1>
+      
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%Y年%m月%d日" }}
+        </time>
+        {% if page.categories %}
+          <span class="categories">
+            {% for category in page.categories %}
+              <span class="category-tag">{{ category }}</span>
+            {% endfor %}
+          </span>
+        {% endif %}
+      </div>
 
-    {% if page.toc %}
-    <div class="table-of-contents">
-      <h2>目次</h2>
-      {{ content | toc }}
-    </div>
-    {% endif %}
-  </header>
+      {% if page.toc %}
+      <div class="table-of-contents">
+        <h2>目次</h2>
+        {{ content | toc }}
+      </div>
+      {% endif %}
+    </header>
 
-  <div class="post-content e-content">
-    {{ content }}
-  </div>
-</article>
+    <div class="post-content e-content">
+      {{ content }}
+    </div>
+  </article>
+</div>
